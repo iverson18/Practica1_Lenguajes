@@ -11,6 +11,7 @@ class Nodo{
 
     public:
         Nodo();
+        Nodo(string,string);
         ~Nodo();
         void setUsername(string user);
         string getUsername();
