@@ -7,9 +7,9 @@ Integrantes:
 Descripcion:
 
 El copilador que se utilizo fue: 
-GCC C++ (g++) 
-el depurador que se utilizo fue:
-GDB de mingw-w64
+GCC C++ (g++). 
+El depurador que se utilizo fue:
+GDB de mingw-w64.
 
 video:
   -Pendiente-
