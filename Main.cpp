@@ -102,7 +102,7 @@ int main(){
                     lectura.close();
                     rename("temp.txt","usuarios.txt");
                     Nodo *temp = head;
-                    head->eliminar(temp,usuario,contraseña);
+                    head = head->eliminar(temp,usuario,contraseña);
                 }else{
                     cout<<"\n"<<"No se encontró ese usuario"<<"\n"<<endl;
                 }
