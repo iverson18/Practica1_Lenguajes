@@ -19,7 +19,7 @@ class Nodo{
         string getPassword();
         void setNext(Nodo *next);
         Nodo *getNext();
-        void eliminar(Nodo *N, string, string);
+        Nodo *eliminar(Nodo *N, string, string);
 };
 
 #endif
