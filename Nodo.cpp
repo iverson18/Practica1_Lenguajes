@@ -42,7 +42,28 @@ Nodo *Nodo::getNext(){
 
 string Nodo::toString(){
     string txt = this->username + "\n";
-    txt = txt + "\n"; 
-    txt = txt + this->password + "\n";
+    txt = txt + this->password;
     return txt;
+}
+
+void Nodo::eliminar(Nodo *lista, string username, string password){
+    if(lista != NULL){
+        Nodo *borrar;
+        Nodo *anterior;
+        borrar = lista;
+        
+        while((borrar != NULL)&&(username != borrar->username)&&(password != borrar->password)){
+            anterior = borrar;
+            borrar = borrar->next;
+        }
+        if(borrar == NULL){
+            cout<<"ERROR"<<endl;
+        }else if(anterior == NULL){
+            lista = lista->next;
+            delete borrar;
+        }else{
+            anterior->next = borrar->next;
+            delete borrar;
+        }
+    } 
 }
