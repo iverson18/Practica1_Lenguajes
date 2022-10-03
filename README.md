@@ -12,4 +12,4 @@ El depurador que se utilizo fue:
 GDB de mingw-w64
 
 video:
-  -Pendiente-
+  https://eafit.sharepoint.com/sites/PYLenguajes/Documentos%20compartidos/General/Recordings/Nueva%20reuni%C3%B3n%20de%20canal-20221003_000455-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n.mp4?web=1
