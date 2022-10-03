@@ -46,24 +46,32 @@ string Nodo::toString(){
     return txt;
 }
 
-void Nodo::eliminar(Nodo *lista, string username, string password){
-    if(lista != NULL){
-        Nodo *borrar;
-        Nodo *anterior;
-        borrar = lista;
-        
-        while((borrar != NULL)&&(username != borrar->username)&&(password != borrar->password)){
-            anterior = borrar;
-            borrar = borrar->next;
+Nodo *Nodo::eliminar(Nodo *head, string username, string password){
+    if(head == NULL){
+        cout<<"ERROR"<<endl;
+        return NULL;
+    }
+    Nodo *actual;
+    Nodo *anterior;
+    actual = head;
+    if((username == actual->username)&&(password == actual->password)){
+            anterior = actual;
+            actual = anterior->next;
+            anterior->next = NULL; 
+            delete anterior;
+            return actual;
         }
-        if(borrar == NULL){
-            cout<<"ERROR"<<endl;
-        }else if(anterior == NULL){
-            lista = lista->next;
-            delete borrar;
-        }else{
-            anterior->next = borrar->next;
-            delete borrar;
+    while(actual->next != NULL){
+        anterior = actual;
+        actual = anterior->next;
+        if((username == actual->username)&&(password == actual->password)){
+            anterior->next = actual->next;
+            actual->next = NULL;
         }
-    } 
+    }
+    if((actual->next == NULL)&&(username == actual->username)&&(password == actual->password)){
+            anterior->next = NULL;
+            delete actual;
+    }
+    return head;
 }
